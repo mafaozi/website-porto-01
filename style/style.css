@@ -1,53 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 
-:root {
+*, html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-in-out;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid crimson;
 }
 
 
 /* NAVIGATION BAR */
-
-
 .navbar{
     background-color: white;
     position: fixed;
-    /* box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.123); */
     width: 100%;
     z-index: 5;
-    margin-top: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
 .navbar-brand{
     font-weight: 800;
 }
-
 .nav-item{
     border: none;
     padding-left: 20px;
 }
-
 .nav-link{
     border-radius: 5px;
     font-weight: 500;
-    /* padding: 0px 10px; */
     color: #000;
 }
-
 .nav-button{
     padding: 5px 10px;
     border: none;
     background-color: transparent;
     border-radius: 5px;
 }
-
 .nav-item :hover {
     color: #000;
     background-color: #e6b939;
 }
-
 .nav-button:hover{
     border: none;
     background-color: #e6b939;
@@ -57,45 +53,35 @@
 
 
 /* HERO */
-
 .circle{
-    width: 650px;
-    height: 650px;
-    border-radius: 50%;
-    background-color: #e6b939;
     margin-top: 0;
 }
-
 .circle>p{
-    margin-left: 80%;
-    padding-top: 30%;
+    margin-left: 90vh;
+    padding-top: 15%;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 65px;
     line-height: 100%;
+    position: absolute;
 }
-
 .image-profile{
-    transition: 1s;
     height: 700px;
     width: auto;
-    margin-left: 330px;
+    margin-left: 25%;
+    margin-bottom: 100px;
 }
-
 .hero-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     z-index: 3;
     margin-top: 15vh;
     padding: 5px;
-    transition: 1s;
 }
-
 .hero-text > p {
     font-size: 15px;
     color: #000;
 }
-
 .hero-button {
     background-color: transparent;
     border: none;
@@ -103,17 +89,75 @@
     font-weight: 500;
     color: #000;
     padding: 5px;
-    transition: 1s 0.2s;
 }
-
 .hero-button:hover {
     background-color: #e6b939;
     border-radius: 5px;
 }
 
 
-@keyframes fadeIn {
+/* skill section  */
+.skill-container{
+    height: 100vh;
+}
+.skill{
+    border-radius: 10px;
+    padding: 15px;
+}
+.progress{
+    padding: 0;
+}
+.progress-html{
+    background-color: #e6b939;
+    width: 80%;
+}
+.progress-css{
+    background-color: #e6b939;
+    width: 60%;
+}
+.progress-js{
+    background-color: #e6b939;
+    width: 15%;
+}
+.progress-solidity{
+    background-color: #e6b939;
+    width: 50%;
+}
+.my-skills{
+    margin-top: 10%;
+}
+.my-skills>h1{
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.skill-list{
+    margin-top: 5%;
+}
+.skill-detail{
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.skill-detail:hover{
+    animation: fadeInOut 2s infinite;
+}
+.skill-detail>h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 400
+}
+@keyframes fadeInOut {
     0% {
-
+        box-shadow: 0 1px 20px #e6b83938;
     }
+    
+    50%{
+        box-shadow: 0 1px 20px #e6b939;
+        box-shadow: 0 1px 20px #e6b939;
+    }
+    100%{
+        box-shadow: 0 1px 20px #e6b83938;
+
+    }  
 }
